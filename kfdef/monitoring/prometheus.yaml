@@ -7,6 +7,11 @@ metadata:
     app: prometheus
     prometheus: k8s
 spec:
+  alerting:
+    alertmanagers:
+      - name: odh-monitoring
+        namespace: opf-monitoring
+        port: web
   serviceMonitorSelector: {}
   securityContext: {}
   ruleSelector: {}
