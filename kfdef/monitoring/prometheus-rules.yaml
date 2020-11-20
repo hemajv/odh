@@ -10,9 +10,9 @@ spec:
   groups:
     - name: OperateFirst
       rules:
-        - alert: JupyterHub Service Down
-          expr: up{service="jupyterhub"} == 0
+        - alert: Service Down
+          expr: up{service="prometheus-operated"} == 1
           for: 1m
           annotations:
-            summary: "JupyterHub is no longer available"
+            summary: "Service is no longer available"
             severity: "HIGH"
