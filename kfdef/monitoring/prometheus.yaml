@@ -14,7 +14,10 @@ spec:
         port: web
   serviceMonitorSelector: {}
   securityContext: {}
-  ruleSelector: {}
+  ruleSelector:
+    matchLabels:
+      role: alert-rules
+      prometheus: k8s
   replicas: 2
   remoteRead:
     - url: "http://prometheus-operated.opf-jupyterhub.svc.cluster.local:9090\
