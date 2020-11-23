@@ -9,7 +9,7 @@ metadata:
 spec:
   alerting:
     alertmanagers:
-      - name: alert-manager
+      - name: alertmanager-operated
         namespace: opf-monitoring
         port: web
   serviceMonitorSelector:
