@@ -11,7 +11,7 @@ spec:
     - name: OperateFirst
       rules:
         - alert: Service Down
-          expr: up{service="prometheus-operated"} == 1
+          expr: up{service="prometheus-operated"} == 0
           for: 1m
           annotations:
             summary: "Service is no longer available"
