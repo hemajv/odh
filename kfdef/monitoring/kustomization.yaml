@@ -6,6 +6,7 @@ resources:
   - kfdef.yaml
   - prometheus.yaml
   - prometheus-route.yaml
+  - prometheus-rules.yaml
   - grafana.yaml
   - alertmanager.yaml
   - alertmanager-route.yaml
