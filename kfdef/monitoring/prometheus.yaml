@@ -12,8 +12,19 @@ spec:
       - name: alert-manager
         namespace: opf-monitoring
         port: web
-  serviceMonitorSelector: {}
+  serviceMonitorSelector:
+    matchLabels:
+      prometheus: k8s
+  serviceMonitorNamespaceSelector:
+    matchLabels: {}
+  podMonitorSelector:
+    matchLabels:
+      prometheus: k8s
+  podMonitorNamespaceSelector:
+    matchLabels: {}
   securityContext: {}
+  ruleNamespaceSelector:
+    matchLabels: {}
   ruleSelector:
     matchLabels:
       role: alert-rules
