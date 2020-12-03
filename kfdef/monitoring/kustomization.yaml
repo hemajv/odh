@@ -12,3 +12,5 @@ resources:
   - alertmanager-route.yaml
   - alertmanager-service.yaml
   - alertmanager-config.yaml
+  - github-recevier.yaml
+  - github-receiver-service.yaml
