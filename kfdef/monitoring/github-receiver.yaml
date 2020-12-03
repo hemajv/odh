@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
         - name: github-receiver
-          image: quay.io/4n4nd/alertmanager-github-receiver:0.8
+          image: quay.io/4n4nd/alertmanager-github-receiver:v0.8
           env:
           - name: GITHUB_AUTH_TOKEN
             valueFrom:
