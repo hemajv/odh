@@ -29,7 +29,7 @@ spec:
                 "--org=hemajv",
                 "--repo=test",
                 "--label=in progress",
-                "--enable-inmemory={{GITHUB_RECEIVER_INMEMORY}}" ]
+                "--enable-inmemory=true" ]
           ports:
             - containerPort: 9393
               name: receiver
