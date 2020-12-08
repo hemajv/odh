@@ -21,10 +21,6 @@ stringData:
       receiver: 'github-receiver-issues'
 
     receivers:
-    - name: 'webhook'
-      webhook_configs:
-        - url: 'http://alertmanagerwh:30500/'
-
     - name: 'developer-mails'
       email_configs:
         - to: 'hveeradh@redhat.com'
