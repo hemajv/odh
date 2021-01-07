@@ -14,7 +14,7 @@ spec:
       - name: alertmanager-operated
         namespace: opf-monitoring
         port: web
-  serviceAccountName: prometheus-operator
+  serviceAccountName: prometheus-k8s
   serviceMonitorSelector:
     matchLabels:
       prometheus: k8s
