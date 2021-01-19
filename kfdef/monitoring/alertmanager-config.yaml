@@ -14,11 +14,17 @@ stringData:
       smtp_require_tls: false
 
     route:
-      group_by: ['job']
+      group_by: ['alertname', 'job']
       group_wait: 30s
       group_interval: 5m
       repeat_interval: 3h
       receiver: 'github-receiver-issues'
+
+    routes:
+    - match_re:
+        alertname: DeadManSwitch
+      receiver: deadman-switch
+      repeat_interval: 5m
 
     receivers:
     - name: 'developer-mails'
@@ -29,3 +35,8 @@ stringData:
     - name: 'github-receiver-issues'
       webhook_configs:
         - url: 'http://github-receiver-service.opf-monitoring.svc.cluster.local:9393/v1/receiver'
+
+    - name: 'deadman-switch'
+      webhook_configs:
+        - url: 'https://nosnch.in/b7cd961fad?m=just+checking+in'
+          send_resolved: false

@@ -16,3 +16,13 @@ spec:
           annotations:
             summary: "Service is no longer available"
             severity: "HIGH"
+    - name: DeadManSwitch
+      interval: 1m
+      rules:
+        - alert: DeadManSwitch
+          expr: vector(1)
+          labels:
+            severity: critical
+          annotations:
+            description: This is a DeadManSwitch meant to ensure that the entire Alerting pipeline is functional
+            summary: "Alerting DeadMansSwitch"
